@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios';
+import actor from './components/actor.jsx';
 import './App.css'
 
 function App() {
+  const lista = [];
   function fetchLista() {
-    const lista = [];
     axios.get('https://www.freetestapi.com/api/v1/actors')
       .then(data => {
         for (let i = 0; i < data.data.length; i++) {
@@ -23,7 +24,18 @@ function App() {
   }
 
   return (
-    fetchLista()
+    <div>
+      {fetchLista()}
+      {lista.map((item) => (
+        <Actor
+          immagine={item.immagine}
+          nome={item.nome}
+          annoNascita={item.annoNascita}
+          nazionalità={item.nazionalità}
+          riconoscimenti={item.riconoscimenti}
+          biografia={item.biography}
+        />))}
+    </div>
   );
 }
 
