@@ -9,7 +9,7 @@ function App() {
     axios.get('https://www.freetestapi.com/api/v1/actors')
       .then(data => {
         for (let i = 0; i < data.data.length; i++) {
-          const nuovaLista = response.data.map(actor => ({
+          const nuovaLista = data.data.map(actor => ({
             immagine: actor.image,
             nome: actor.name,
             annoNascita: actor.birth_year,
@@ -21,8 +21,6 @@ function App() {
         }
       })
   }, []);
-
-  console.log(lista[34].immagine);
 
   return (
     <div id='lista'>
