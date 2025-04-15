@@ -1,3 +1,5 @@
+import style from './Actor.module.css'
+
 function Actor({ immagine, nome, annoNascita, nazionalità, riconoscimenti, biografia }) {
     return (
         <div>
