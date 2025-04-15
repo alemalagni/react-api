@@ -2,7 +2,6 @@
 
 E’ arrivato il momento di mettere insieme i concetti appresi creiamo una piccola app che ci mostri un elenco di attori o attrici.
 Usate uno di questi due endpoint, a piacimento:
-
 ```bash
 Lista di Attrici: https://freetestapi.com/api/v1/actresses
 Lista di Attori:  https://freetestapi.com/api/v1/actors
