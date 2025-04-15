@@ -1,33 +1,34 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios';
-//import Actor from './components/Actor'
+import Actor from './components/Actor'
 import './App.css'
 
 function App() {
-  const lista = [];
-  function fetchLista() {
+  const [lista, setLista] = useState([]);
+  useEffect(() => {
     axios.get('https://www.freetestapi.com/api/v1/actors')
       .then(data => {
         for (let i = 0; i < data.data.length; i++) {
-          lista.push({
-            immagine: data.data[i].image,
-            nome: data.data[i].name,
-            annoNascita: data.data[i].birth_year,
-            nazionalità: data.data[i].nationality,
-            riconoscimenti: data.data[i].awards,
-            biografia: data.data[i].biography
-          });
+          const nuovaLista = response.data.map(actor => ({
+            immagine: actor.image,
+            nome: actor.name,
+            annoNascita: actor.birth_year,
+            nazionalità: actor.nationality,
+            riconoscimenti: actor.awards,
+            biografia: actor.biography
+          }));
+          setLista(nuovaLista);
         }
-
-        console.log(lista);
       })
-  }
+  }, []);
+
+  console.log(lista[34].immagine);
 
   return (
-    <div>
-      {fetchLista()}
+    <div id='lista'>
       {lista.map((item) => (
         <Actor
+          key={item.nome}
           immagine={item.immagine}
           nome={item.nome}
           annoNascita={item.annoNascita}
@@ -39,4 +40,4 @@ function App() {
   );
 }
 
-export default App
+export default App;
