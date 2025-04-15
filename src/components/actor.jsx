@@ -16,7 +16,11 @@ function Actor({ immagine, nome, annoNascita, nazionalità, riconoscimenti, biog
                 <span>{nazionalità}</span>
             </div>
             <div className={style.riconoscimenti}>
-                <span>{riconoscimenti}</span>
+                {riconoscimenti.map((item) => (
+                    <p>
+                        {item}
+                    </p>
+                ))}
             </div>
             <div className={style.biografia}>
                 <span>{biografia}</span>
