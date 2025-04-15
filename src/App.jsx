@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios';
-import actor from './components/actor.jsx';
+//import Actor from './components/Actor'
 import './App.css'
 
 function App() {

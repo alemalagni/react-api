@@ -1,4 +1,4 @@
-export default function actor({ immagine, nome, annoNascita, nazionalità, riconoscimenti, biografia }) {
+export default function Actor({ immagine, nome, annoNascita, nazionalità, riconoscimenti, biografia }) {
     return (
         <div>
             <div>
