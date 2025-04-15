@@ -1,0 +1,9 @@
+.actor {
+    padding: 10px 5px;
+    margin: 10px 0px;
+    border: 1px solid #000000;
+}
+
+.nome {
+    font-weight: bold;
+}
