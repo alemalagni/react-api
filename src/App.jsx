@@ -4,9 +4,8 @@ import './App.css'
 
 function App() {
   function fetchLista() {
-    const lista = [];
     axios.get('https://freetestapi.com/api/v1/actors', (req, res) => {
-      lista = data;
+      const lista = data;
       console.log(lista);
     })
   }
